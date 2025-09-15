@@ -25,7 +25,11 @@ class HomeActivity : AppCompatActivity() {
         }
 
         auth = Firebase.auth
-
+        if(auth.currentUser != null){
+            findViewById<TextView>(R.id.loggedEmail).text = auth.currentUser?.email.toString()
+        }else{
+            redirectToLoginPage()
+        }
         findViewById<TextView>(R.id.logoutText).setOnClickListener { logoutUser() }
     }
 
@@ -35,7 +39,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun redirectToLoginPage() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
 }

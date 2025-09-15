@@ -12,12 +12,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome!"
-        android:textColor="@color/design_default_color_primary"
+        android:textColor="@color/fb_red"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Logged User: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/loggedEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="example@gmail.com"
+            android:padding="10dp"
+            android:textColor="?attr/colorTertiary"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/logoutText"
@@ -28,7 +58,7 @@
         android:clickable="true"
         android:focusable="true"
         android:padding="10dp"
-        android:text="Logout"
+        android:text="@string/logout"
         android:textColor="?attr/colorPrimary"
         android:textSize="18sp"
         android:layout_marginBottom="50dp"

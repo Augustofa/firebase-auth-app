@@ -12,8 +12,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="150dp"
-        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,9 +26,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Authentication"
+            android:text="Creating \nAccount"
             android:textColor="@color/fb_red"
-            android:textSize="32dp" />
+            android:textSize="32dp"
+            android:layout_marginRight="30dp"/>
     </LinearLayout>
 
     <LinearLayout
